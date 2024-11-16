@@ -28,7 +28,16 @@ The task parameters are dynamically read from a configuration file, and the proj
 - Easily configurable for different datasets and algorithms.
 
 ## Project Structure
-Dendrite.ai_Task/ │ ├── main.py # Entry point for the application ├── Code_File.ipynb # Jupyter Notebook with step-by-step execution ├── algoparams_from_ui.json # Configuration file for pipeline parameters ├── iris.csv # Sample dataset (Iris dataset) ├── requirements.txt # Python dependencies ├── Screening Test - DS.docx # Task description document ├── LICENSE # License information └── README.md # Project documentation
+The project follows a modular approach with the following file structure:
+- **main.py**: The main Python script that runs the entire pipeline.
+- **Code_File.ipynb**: A Jupyter Notebook providing a detailed breakdown of the task, including code, explanations, and outputs.
+- **algoparams_from_ui.json**: JSON configuration file containing parameters for the pipeline (e.g., algorithm settings, hyperparameters).
+- **iris.csv**: A sample dataset (the Iris dataset) used for testing and experimentation within the project.
+- **requirements.txt**: A list of Python dependencies required for the project, installable via `pip`.
+- **Screening Test - DS.docx**: A document that contains the details and description of the task for which this project is created.
+- **LICENSE**: Contains the licensing details for the project.
+- **README.md**: This file, providing documentation and guidance on how to use and contribute to the project.
+
 ## Requirements
 - Python 3.7 or above
 - Necessary Python libraries listed in `requirements.txt`
