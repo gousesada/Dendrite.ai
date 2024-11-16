@@ -40,23 +40,29 @@ The project follows a modular approach with the following file structure:
 ## Execution
 Clone the repository:
 git clone https://github.com/gousesada/Dendrite.ai_Task.git
-cd Dendrite.ai_Task
-Ensure the required dependencies are installed.
 
-Run the main Python script:
-python main.py
-Modify the algoparams_from_ui.json file to customize the pipeline configuration
 ## Methodology
-Parameter Loading: Configuration parameters for the pipeline are loaded from the JSON file.
-Data Preprocessing:
-Features are handled dynamically based on task requirements.
-Dimensionality reduction techniques are applied.
-Pipeline Creation:
-Feature handling layer.
-Feature reduction layer.
-Estimator layer (classification or regression models).
-Model Tuning: Hyperparameter optimization using GridSearchCV.
-Prediction: Predictions are made on the test set, and results are evaluated using accuracy for classification tasks or RMSE for regression tasks.
+
+The following steps outline the methodology used in this project:
+
+1. **Parameter Loading**: 
+   - Configuration parameters for the pipeline are loaded from the `algoparams_from_ui.json` file, which contains key settings such as model parameters, preprocessing options, and algorithm configurations.
+
+2. **Data Preprocessing**: 
+   - Features are dynamically handled based on the task requirements, allowing for flexibility and automation.
+   - Dimensionality reduction techniques, such as PCA or feature selection methods, are applied to improve model performance and reduce overfitting.
+
+3. **Pipeline Creation**:
+   - **Feature Handling Layer**: This layer is responsible for handling missing values, encoding categorical features, and scaling numerical features.
+   - **Feature Reduction Layer**: Techniques like PCA (Principal Component Analysis) or other methods are used to reduce the dimensionality of the dataset, improving model efficiency and training time.
+   - **Estimator Layer**: This layer contains the machine learning models (classification or regression algorithms), which are selected based on the task (e.g., Decision Trees, Random Forests, or Linear Regression).
+
+4. **Model Tuning**:
+   - Hyperparameter optimization is performed using GridSearchCV, which tests different combinations of hyperparameters to find the best model configuration.
+
+5. **Prediction**:
+   - Predictions are made on the test set, and the model's performance is evaluated using appropriate metrics such as accuracy for classification tasks or RMSE (Root Mean Squared Error) for regression tasks.
+
 ## Results
 The best model and its parameters are saved after optimization. Performance metrics are logged for evaluation.
 ## Requirements
